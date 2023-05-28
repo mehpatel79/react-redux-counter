@@ -16,11 +16,12 @@ const Counter = () => {
 
 
     return(< >
-        <center className="CounterDisplay">
-            <button onClick={substract}>-</button>
+        <center style={{marginTop: "40vh"}}>
+            <button onClick={substract}>-</button>{" "}
             Counter Value : {" "}
-            <b>{counterSlice.counterValue}</b>
-            <button onClick={add}>+</button> 
+            <b>{counterSlice.counterValue}</b>{" "}
+            <button onClick={add}>+</button>
+            {counterSlice.loading && <div>Loading...</div>} 
         </center>
         </>
     );
